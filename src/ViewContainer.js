@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { Container } from "react-bootstrap"
-import {Navbar, NavItem, Nav, Button} from 'react-bootstrap';
+import {Navbar, Container, NavItem, Nav} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import './App.css';
 
 
@@ -11,11 +11,13 @@ class ViewContainer extends Component {
         return (
             <div>
                 <Navbar >
-                    <Navbar.Brand href="/">Tornikotkat</Navbar.Brand>
+                    <Navbar.Brand>
+                        <Link to="/"> Tornikotkat</Link>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav.Link href="esittely">Esittely</Nav.Link>
-                    <Nav.Link href="lippukunta">Lippukunta</Nav.Link>
+                        <Link to="esittely">Esittely </Link>
+                        <Link to="lippukunta">Lippukunta </Link>
                     </Navbar.Collapse>
                 </Navbar>
                 <Container>
